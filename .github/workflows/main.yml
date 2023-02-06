@@ -6,11 +6,11 @@ on:
     
 jobs:
     deploy:
-        runs-on: self-hosted
-    
+        runs-on: self-hosted   
+        
     strategy: 
         matrix:
-            node-version: [12.x]
+            node-version: [12.x]          
             
     steps:
       - uses: actions/checkout@v2
