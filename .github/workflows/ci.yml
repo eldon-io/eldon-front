@@ -41,4 +41,5 @@ jobs:
             git status
             sudo yarn install
             sudo yarn build
-            sudo pm2 restart test
+            sudo pm2 delete all
+            sudo pm2 start yarn --name test -- start
