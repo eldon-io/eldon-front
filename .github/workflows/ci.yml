@@ -36,9 +36,10 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           port: 22
           script: |
-            cd /home/azureuser/site/eldon-front
-            git pull origin master
+            cd ${{ secrets.PATH }}
+            git pull origin deploy
             git status
             sudo yarn install
             sudo yarn build
-            sudo pm2 restart test
+            sudo pm2 delete all
+            sudo pm2 start yarn --name test -- start
