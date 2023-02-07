@@ -19,6 +19,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: cat ${{ secrets.PRIVATE_KEY }}
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
