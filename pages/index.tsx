@@ -70,7 +70,9 @@ export default function Home() {
             <h2 className={inter.className}>
               Docs <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>Hey I've Deployed thanks to git.</p>
+            <p className={inter.className}>
+              Hey I have Deployed thanks to git.
+            </p>
           </a>
 
           <a
