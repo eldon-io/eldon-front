@@ -18,7 +18,8 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            I am the bosssssss!
+            I am a <code className={styles.code}>Next.js</code> developer and I
+            am using <code className={styles.code}>Louis</code> for deployment.
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>
