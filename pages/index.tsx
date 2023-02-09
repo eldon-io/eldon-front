@@ -18,8 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            I am a <code className={styles.code}>Next.js</code> developer and I
-            am using <code className={styles.code}>Louis</code> for deployment.
+            Hello Everyone this is a test for git.
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>
