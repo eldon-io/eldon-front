@@ -1,26 +1,26 @@
-/** @jsx jsx */
-import { jsx, Container, Box, Flex } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import React, { useState } from 'react';
-import Carousel from 'react-multi-carousel';
-import PriceCard from 'components/price-card';
-import ButtonGroup from 'components/button-group';
-import SectionHeader from 'components/section-header';
-import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
+import { jsx, Container, Box, Flex } from "theme-ui";
+import { keyframes } from "@emotion/react";
+
+import React, { useState } from "react";
+import Carousel from "react-multi-carousel";
+import PriceCard from "../components/price-card";
+import ButtonGroup from "../components/button-group";
+import SectionHeader from "../components/section-header";
+import { IoIosCheckmarkCircle, IoIosCloseCircle } from "react-icons/io";
 
 const packages = {
   monthly: [
     {
       id: 1,
-      name: 'Free Plan',
-      description: 'For Individuals',
-      buttonText: 'Start free trail',
-      priceWithUnit: '0$',
+      name: "Free Plan",
+      description: "For Individuals",
+      buttonText: "Start free trail",
+      priceWithUnit: "0$",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: 'One social media account',
+          text: "One social media account",
           isAvailable: true,
         },
         {
@@ -32,29 +32,29 @@ const packages = {
         {
           id: 3,
           icon: <IoIosCloseCircle />,
-          text: 'Lorem ipsum dolor sit amet',
+          text: "Lorem ipsum dolor sit amet",
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCloseCircle />,
-          text: 'Lorem ipsum dolor sit amet',
+          text: "Lorem ipsum dolor sit amet",
           isAvailable: true,
         },
       ],
     },
     {
       id: 2,
-      name: 'Pro Master',
-      description: 'For Professional accounts ',
-      priceWithUnit: '11.99$',
-      buttonText: 'Create account',
-      anotherOption: 'Or Start 14 Days trail',
+      name: "Pro Master",
+      description: "For Professional accounts ",
+      priceWithUnit: "11.99$",
+      buttonText: "Create account",
+      anotherOption: "Or Start 14 Days trail",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Up to two social media accounts',
+          text: "Up to two social media accounts",
           isAvailable: true,
         },
         {
@@ -66,31 +66,31 @@ const packages = {
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Lorem ipsum dolor sit amet',
+          text: "Lorem ipsum dolor sit amet",
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Lorem ipsum dolor sit amet',
+          text: "Lorem ipsum dolor sit amet",
           isAvailable: true,
         },
       ],
     },
     {
       id: 3,
-      header: 'Suggested',
+      header: "Suggested",
       headerIcon: <IoIosCheckmarkCircle />,
-      name: 'Premium Plan',
-      description: 'For Enterprise businesses',
-      priceWithUnit: '15$',
-      buttonText: 'Create account',
-      anotherOption: 'Or Start 14 Days trail',
+      name: "Premium Plan",
+      description: "For Enterprise businesses",
+      priceWithUnit: "15$",
+      buttonText: "Create account",
+      anotherOption: "Or Start 14 Days trail",
       points: [
         {
           id: 1,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Access to all social media accounts',
+          text: "Access to all social media accounts",
           isAvailable: true,
         },
         {
@@ -102,18 +102,18 @@ const packages = {
         {
           id: 3,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Lorem ipsum dolor sit amet',
+          text: "Lorem ipsum dolor sit amet",
           isAvailable: true,
         },
         {
           id: 4,
           icon: <IoIosCheckmarkCircle />,
-          text: 'Lorem ipsum dolor sit amet',
+          text: "Lorem ipsum dolor sit amet",
           isAvailable: true,
         },
       ],
     },
-  ]
+  ],
 };
 
 const responsive = {
@@ -137,15 +137,15 @@ const responsive = {
 export default function Package() {
   const { monthly } = packages;
   const [state, setState] = useState({
-    active: 'monthly',
+    active: "monthly",
     pricingPlan: monthly,
   });
 
   const handlePricingPlan = (plan) => {
-    if (plan === 'monthly') {
+    if (plan === "monthly") {
       setState({
         ...state,
-        active: 'monthly',
+        active: "monthly",
         pricingPlan: monthly,
       });
     }
@@ -156,26 +156,26 @@ export default function Package() {
     arrows: false,
     autoPlaySpeed: 3000,
     centerMode: false,
-    className: '',
+    className: "",
     slidesToSlide: 1,
     items: 3,
-    containerClass: 'carousel-container',
+    containerClass: "carousel-container",
     customButtonGroup: <ButtonGroup />,
-    dotListClass: '',
+    dotListClass: "",
     focusOnSelect: false,
     infinite: false,
     keyBoardControl: false,
-    itemClass: '',
+    itemClass: "",
     minimumTouchDrag: 80,
     renderButtonGroupOutside: true,
     renderDotsOutside: false,
     responsive: responsive,
     showDots: false,
-    sliderClass: '',
+    sliderClass: "",
   };
 
   return (
-    <section id="pricing" sx={{ variant: 'section.pricing' }}>
+    <section id="pricing" sx={{ variant: "section.pricing" }}>
       <Container>
         <SectionHeader
           slogan="Pricing Plan"
@@ -184,10 +184,10 @@ export default function Package() {
         <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
             <button
-              className={state.active === 'monthly' ? 'active' : ''}
+              className={state.active === "monthly" ? "active" : ""}
               type="button"
               aria-label="Monthly"
-              onClick={() => handlePricingPlan('monthly')}
+              onClick={() => handlePricingPlan("monthly")}
             >
               Monthly Plan
             </button>
@@ -230,75 +230,75 @@ const fadeIn2 = keyframes`
 `;
 const styles = {
   pricingWrapper: {
-    mb: '-40px',
-    mt: '-40px',
+    mb: "-40px",
+    mt: "-40px",
     mx: -3,
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    '&.pricing__wrapper .package__card': {
-      '.package__header': {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    "&.pricing__wrapper .package__card": {
+      ".package__header": {
         animation: `${fadeIn} 0.8s ease-in`,
       },
-      'ul > li': {
+      "ul > li": {
         animation: `${fadeIn2} 0.7s ease-in`,
       },
-      '.package__price': {
+      ".package__price": {
         animation: `${fadeIn2} 0.9s ease-in`,
       },
       button: {
         animation: `${fadeIn2} 1s ease-in`,
       },
     },
-    '.carousel-container': {
-      width: '100%',
-      '> ul > li ': {
-        display: 'flex',
+    ".carousel-container": {
+      width: "100%",
+      "> ul > li ": {
+        display: "flex",
       },
     },
-    '.button__group': {
-      display: ['flex', null, null, null, 'none'],
+    ".button__group": {
+      display: ["flex", null, null, null, "none"],
       mb: [4, null, null, null, 0],
     },
   },
   pricingItem: {
     mx: 3,
-    display: 'flex',
+    display: "flex",
     flexShrink: 0,
-    flex: '1 1 auto',
+    flex: "1 1 auto",
   },
   buttonGroup: {
-    justifyContent: 'center',
-    mb: '7',
-    mt: ['-15px', '-35px'],
-    position: 'relative',
+    justifyContent: "center",
+    mb: "7",
+    mt: ["-15px", "-35px"],
+    position: "relative",
     zIndex: 2,
   },
   buttonGroupInner: {
-    display: 'flex',
-    padding: '7px',
-    margin: '0 auto',
-    borderRadius: '5px',
-    backgroundColor: '#F7F8FB',
+    display: "flex",
+    padding: "7px",
+    margin: "0 auto",
+    borderRadius: "5px",
+    backgroundColor: "#F7F8FB",
     button: {
       border: 0,
-      padding: ['15px 20px', '15px 27px'],
-      borderRadius: '5px',
-      color: 'text',
+      padding: ["15px 20px", "15px 27px"],
+      borderRadius: "5px",
+      color: "text",
       fontSize: [1, 2],
       lineHeight: 1.2,
       fontWeight: 500,
-      backgroundColor: 'transparent',
-      cursor: 'pointer',
-      fontFamily: 'body',
-      letterSpacing: '-0.24px',
-      transition: 'all 0.3s',
-      '&.active': {
-        color: '#0f2137',
-        backgroundColor: '#ffffff',
-        boxShadow: '0 3px 4px rgba(38, 78, 118, 0.1)',
+      backgroundColor: "transparent",
+      cursor: "pointer",
+      fontFamily: "body",
+      letterSpacing: "-0.24px",
+      transition: "all 0.3s",
+      "&.active": {
+        color: "#0f2137",
+        backgroundColor: "#ffffff",
+        boxShadow: "0 3px 4px rgba(38, 78, 118, 0.1)",
       },
-      '&:focus': {
+      "&:focus": {
         outline: 0,
       },
     },
