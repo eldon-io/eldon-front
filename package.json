@@ -7,7 +7,6 @@
     "build": "next build",
     "serve": "next start",
     "export": "next export",
-    "postbuild": "next-sitemap",
     "deploy": "vercel --prod"
   },
   "dependencies": {
@@ -18,7 +17,7 @@
     "framer-motion": "^2.7.5",
     "globby": "^11.0.0",
     "isomorphic-unfetch": "^3.0.0",
-    "next": "9.5.3",
+    "next": "^13.2.4",
     "next-auth": "^4.21.1",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.4",
