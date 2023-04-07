@@ -6,7 +6,7 @@ export default {
   widgets: [
     {
       id: 1,
-      iconSrc: Chat,
+      iconSrc: Chat.src,
       altText: "Community",
       title: "Join the Community",
       description:
@@ -14,7 +14,7 @@ export default {
     },
     {
       id: 2,
-      iconSrc: Community,
+      iconSrc: Community.src,
       altText: "Chat",
       title: "Chat Communication",
       description:
@@ -22,7 +22,7 @@ export default {
     },
     {
       id: 3,
-      iconSrc: Github,
+      iconSrc: Github.src,
       altText: "Github",
       title: "Github Access",
       description:

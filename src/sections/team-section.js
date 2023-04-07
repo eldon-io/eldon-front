@@ -8,7 +8,7 @@ import Member1 from "../assets/team/member-1.png";
 const data = [
   {
     id: 1,
-    imgSrc: Member1,
+    imgSrc: Member1.src,
     altText: "ALAOUI EL HASSANI Ghita",
     title: "ALAOUI EL HASSANI Ghita",
     designation: "Founder, Web designer and CMO",
@@ -35,7 +35,7 @@ const data = [
   },
   {
     id: 2,
-    imgSrc: Member1,
+    imgSrc: Member1.src,
     altText: "CAMARA  Adama",
     title: "CAMARA  Adama",
     designation: "Founder and Back-end developer",
@@ -62,7 +62,7 @@ const data = [
   },
   {
     id: 3,
-    imgSrc: Member1,
+    imgSrc: Member1.src,
     altText: "LAMBERT Julien",
     title: "LAMBERT Julien",
     designation: "Founder and AI Specialist",
@@ -89,7 +89,7 @@ const data = [
   },
   {
     id: 4,
-    imgSrc: Member1,
+    imgSrc: Member1.src,
     altText: "LOMBARD Louis",
     title: "LOMBARD Louis",
     designation: "Founder and Web designer",
@@ -116,7 +116,7 @@ const data = [
   },
   {
     id: 5,
-    imgSrc: Member1,
+    imgSrc: Member1.src,
     altText: "MOGANE Latchoumipraba",
     title: "MOGANE Latchoumipraba",
     designation: "Founder, AI Specialist and CMO",

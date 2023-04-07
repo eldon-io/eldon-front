@@ -19,21 +19,20 @@ import shapePattern from "../assets/shape-pattern1.png";
 
 import Smart from "../assets/services/smart.svg";
 import Secure from "../assets/services/secure.svg";
-
 const data = {
   subTitle: "Services provided",
   title: "Business Goals Achieved with ELDON",
   features: [
     {
       id: 1,
-      imgSrc: Smart,
+      imgSrc: Smart.src,
       altText: "Smart Features",
       title: "Smart Features",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },
     {
       id: 2,
-      imgSrc: Secure,
+      imgSrc: Secure.src,
       altText: "Secure Contents",
       title: "Secure Contents",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -52,7 +51,7 @@ export default function ServiceSection() {
     <section sx={{ variant: "section.services" }} id="feature">
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <Image src={ServiceThumb} alt="Thumbnail" />
+          <Image src={ServiceThumb.src} alt="Thumbnail" />
           <Button
             sx={styles.videoBtn}
             onClick={handleClick}
@@ -64,7 +63,7 @@ export default function ServiceSection() {
           </Button>
 
           <Box sx={styles.shapeBox}>
-            <Image src={shapePattern} alt="Shape" />
+            <Image src={shapePattern.src} alt="Shape" />
           </Box>
         </Box>
         <Box sx={styles.contentBox}>

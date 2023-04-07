@@ -57,7 +57,7 @@ export default function WorkFlow() {
 const styles = {
   workflow: {
     backgroundColor: "secondary",
-    backgroundImage: `url(${PatternBG})`,
+    backgroundImage: `url(${PatternBG.src})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: "center center",
     backgroundSize: "cover",

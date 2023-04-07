@@ -7,6 +7,7 @@ import img1 from "../assets/uqac.png";
 import bannerImg from "../assets/banner-image-1-1.png";
 
 const Banner = () => {
+  console.log(img1);
   return (
     <Box sx={styles.banner} id="home">
       <Container sx={styles.container}>
@@ -26,7 +27,7 @@ const Banner = () => {
               <Box as="div">
                 <Image
                   loading="lazy"
-                  src={img1}
+                  src={img1.src}
                   width="100"
                   height="28"
                   alt=""
@@ -35,7 +36,7 @@ const Banner = () => {
             </Box>
           </Box>
           <Box sx={styles.image}>
-            <Image src={bannerImg} width="958" height="765" alt="" />
+            <Image src={bannerImg.src} width="958" height="765" alt="" />
           </Box>
         </Grid>
       </Container>
@@ -61,7 +62,7 @@ const styles = {
       height: "100%",
       width: "100%",
       zIndex: -1,
-      backgroundImage: `url(${ShapeLeft})`,
+      backgroundImage: `url(${ShapeLeft.src})`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: "center left",
       backgroundSize: "14%",
@@ -74,7 +75,7 @@ const styles = {
       height: "100%",
       width: "100%",
       zIndex: -1,
-      backgroundImage: `url(${ShapeRight})`,
+      backgroundImage: `url(${ShapeRight.src})`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: "bottom right",
       backgroundSize: "12%",

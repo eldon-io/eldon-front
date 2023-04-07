@@ -22,7 +22,7 @@ export default function Header({ className }) {
       <header>
         <Container sx={styles.header} className={className} id="header">
           <Container sx={styles.container}>
-            <Logo src={LOGOELDON} sx={styles.logo} />
+            <Logo src={LOGOELDON.src} sx={styles.logo} />
             <Flex as="nav" sx={styles.nav}>
               {menuItems.map(({ path, label }, i) => (
                 <ScrollLink

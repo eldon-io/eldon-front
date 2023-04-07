@@ -15,7 +15,7 @@ const data = [
     title: "Modern look & trending design",
     description:
       "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-    avatar: Avatar1,
+    avatar: Avatar1.src,
     name: "Denny Hilguston",
     designation: "@denny.hil",
     review: 4,
@@ -25,7 +25,7 @@ const data = [
     title: "Design Quality & performance",
     description:
       "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-    avatar: Avatar2,
+    avatar: Avatar2.src,
     name: "Denny Hilguston",
     designation: "@denny.hil",
     review: 5,
@@ -35,7 +35,7 @@ const data = [
     title: "Layout and organized layers",
     description:
       "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-    avatar: Avatar3,
+    avatar: Avatar3.src,
     name: "Denny Hilguston",
     designation: "@denny.hil",
     review: 5,
@@ -45,7 +45,7 @@ const data = [
     title: "Modern look & trending design",
     description:
       "Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.",
-    avatar: Avatar4,
+    avatar: Avatar4.src,
     name: "Denny Hilguston",
     designation: "@denny.hil",
     review: 4,
