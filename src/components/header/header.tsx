@@ -16,7 +16,7 @@ import { useSession } from "next-auth/react";
 export default function Header({ className }) {
   const { data: session, status } = useSession();
 
-  console.log(session);
+  console.log(process.env.NEXTAUTH_URL);
   return (
     <DrawerProvider>
       <header>
@@ -44,7 +44,15 @@ export default function Header({ className }) {
               variant="primary"
               aria-label="Get Started"
               onClick={
-                status === "authenticated" ? () => signOut() : () => signIn()
+                status === "authenticated"
+                  ? () =>
+                      signOut({
+                        callbackUrl: "/",
+                      })
+                  : () =>
+                      signIn("twitter", {
+                        callbackUrl: process.env.NEXT_PUBLIC_URL + "/dashboard",
+                      })
               }
             >
               {status === "authenticated" ? "Logout" : "Login"}
