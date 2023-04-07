@@ -30,8 +30,8 @@ const data = [
 
 export default function WorkFlow() {
   return (
-    <section sx={styles.workflow}>
-      <Container>
+    <section>
+      <Container sx={styles.workflow}>
         <SectionHeader
           slogan="How it works ?"
           title="Let’s see how it works"
@@ -53,7 +53,7 @@ export default function WorkFlow() {
     </section>
   );
 }
-
+console.log(PatternBG.src);
 const styles = {
   workflow: {
     backgroundColor: "secondary",

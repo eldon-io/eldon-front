@@ -10,28 +10,28 @@ import Support from "../assets/feature/support.svg";
 const data = [
   {
     id: 1,
-    imgSrc: Performance,
+    imgSrc: Performance.src,
     altText: "Fast Performance",
     title: "Fast Performance",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
-    imgSrc: Partnership,
+    imgSrc: Partnership.src,
     altText: "Pro Subscription",
     title: "Pro Subscription",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
-    imgSrc: Subscription,
+    imgSrc: Subscription.src,
     altText: "Partnership deal",
     title: "Partnership deal",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 4,
-    imgSrc: Support,
+    imgSrc: Support.src,
     altText: "Customer Support",
     title: "Customer Support",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
