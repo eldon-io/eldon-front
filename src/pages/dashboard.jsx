@@ -18,6 +18,14 @@ import {
   TwitterOnAirButton,
 } from "react-twitter-embed";
 
+const DUMMYTWTILIST = [...Array(5)].map((_, i) => {
+  return {
+    text: "Ballec",
+    id: "1643805095480492033",
+    answer: i % 2,
+  };
+});
+
 const Dashboard = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -25,6 +33,8 @@ const Dashboard = () => {
   if (status === "unauthenticated") {
     router.push("/");
   }
+
+  const [tweets, setTweets] = React.useState([]);
 
   useEffect(() => {
     const fetchdata = async () => {
@@ -41,8 +51,8 @@ const Dashboard = () => {
         });
 
         const response = await rep.json();
-
-        console.log(await rep.json());
+        //console.log(response);
+        setTweets(response.res);
       } catch (err) {
         console.log(err);
       }
@@ -51,11 +61,20 @@ const Dashboard = () => {
       fetchdata();
     }
   }, [session]);
+  console.log(tweets.length);
   return (
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          <TwitterTweetEmbed tweetId={"933354946111705097"} />
+          {tweets.map((elem) => {
+            return (
+              <>
+                <br />
+                TWEET EN BAS = {`${elem.answer === 1 ? "HATE" : "LOVE"}`}
+                <TwitterTweetEmbed tweetId={`${elem.id}`} />
+              </>
+            );
+          })}
         </Layout>
       </StickyProvider>
     </ThemeProvider>
