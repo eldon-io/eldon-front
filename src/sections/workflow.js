@@ -53,7 +53,6 @@ export default function WorkFlow() {
     </section>
   );
 }
-console.log(PatternBG.src);
 const styles = {
   workflow: {
     backgroundColor: "secondary",

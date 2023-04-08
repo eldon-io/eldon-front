@@ -16,7 +16,6 @@ import { useSession } from "next-auth/react";
 export default function Header({ className }) {
   const { data: session, status } = useSession();
 
-  console.log(process.env.NEXTAUTH_URL);
   return (
     <DrawerProvider>
       <header>

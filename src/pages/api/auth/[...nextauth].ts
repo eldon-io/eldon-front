@@ -10,6 +10,22 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
+  callbacks: {
+    async session({ session, token, user }) {
+      session.user.id = token.id;
+      return session;
+    },
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+      }
+      return token;
+    },
+    async signIn({ user, account, profile, email, credentials }) {
+      user.twitterId = profile.id;
+      return true;
+    },
+  },
 };
 
 export default NextAuth(authOptions);

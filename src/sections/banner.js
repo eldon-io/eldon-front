@@ -7,7 +7,6 @@ import img1 from "../assets/uqac.png";
 import bannerImg from "../assets/banner-image-1-1.png";
 
 const Banner = () => {
-  console.log(img1);
   return (
     <Box sx={styles.banner} id="home">
       <Container sx={styles.container}>
