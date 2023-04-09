@@ -33,6 +33,8 @@ export default async function handler(req, res) {
   test.forEach((element) => {
     if (element.data) {
       element.data.forEach((tweet) => {
+        //Remove word beginning with @
+        tweet.text = tweet.text.replace(/@\w+/g, "");
         twiit.push({ text: tweet.text, id: tweet.id });
       });
     }
@@ -48,16 +50,21 @@ export default async function handler(req, res) {
     );
   });
 
-  //console.log(test);
-  //TODO Talk with back to get answe
-  twiit = twiit.map((tweet) => {
-    return {
-      text: tweet.text,
-      id: tweet.id,
-      answer: Math.floor(Math.random() * 2),
-    };
-  });
+  console.log(twiit);
+  //Make a post request with json body
+  const response = await fetch(
+    "http://eldonback.eastus.cloudapp.azure.com/response",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ tweets: twiit }),
+    }
+  );
+  const realrep = await response.json();
 
-  console.log(twiit.length);
-  res.status(200).json({ res: twiit });
+  console.log(realrep);
+
+  res.status(200).json({ res: realrep.answer });
 }

@@ -22,7 +22,7 @@ const DUMMYTWTILIST = [...Array(5)].map((_, i) => {
   return {
     text: "Ballec",
     id: "1643805095480492033",
-    answer: i % 2,
+    result: i % 2,
   };
 });
 
@@ -35,7 +35,7 @@ const Dashboard = () => {
   }
 
   const [tweets, setTweets] = React.useState([]);
-
+  const [isLoading, setIsLoading] = React.useState(true);
   useEffect(() => {
     const fetchdata = async () => {
       try {
@@ -52,6 +52,7 @@ const Dashboard = () => {
 
         const response = await rep.json();
         //console.log(response);
+        setIsLoading(false);
         setTweets(response.res);
       } catch (err) {
         console.log(err);
@@ -66,15 +67,19 @@ const Dashboard = () => {
     <ThemeProvider theme={theme}>
       <StickyProvider>
         <Layout>
-          {tweets.map((elem) => {
-            return (
-              <>
-                <br />
-                TWEET EN BAS = {`${elem.answer === 1 ? "HATE" : "LOVE"}`}
-                <TwitterTweetEmbed tweetId={`${elem.id}`} />
-              </>
-            );
-          })}
+          {isLoading ? (
+            <div>LOADING</div>
+          ) : (
+            tweets.map((elem) => {
+              return (
+                <>
+                  <br />
+                  TWEET EN BAS = {`${elem.result === 1 ? "HATE" : "LOVE"}`}
+                  <TwitterTweetEmbed tweetId={`${elem.id}`} />
+                </>
+              );
+            })
+          )}
         </Layout>
       </StickyProvider>
     </ThemeProvider>
