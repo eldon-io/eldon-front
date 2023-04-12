@@ -10,7 +10,7 @@ export default {
       altText: "Community",
       title: "Join the Community",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
+        "Connect with like-minded individuals and stay updated on the latest developments in online safety by joining our community.",
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export default {
       altText: "Chat",
       title: "Chat Communication",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
+        "Need help or have a question? Our chat communication feature allows you to connect with our support team and other community members in real-time.",
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ export default {
       altText: "Github",
       title: "Github Access",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit sed eiusmod tempor.",
+        "Take your involvement to the next level by accessing our open-source code and contributing to the development of our app.",
     },
   ],
   menuItem: [

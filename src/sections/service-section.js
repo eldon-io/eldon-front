@@ -19,6 +19,7 @@ import shapePattern from "../assets/shape-pattern1.png";
 
 import Smart from "../assets/services/smart.svg";
 import Secure from "../assets/services/secure.svg";
+
 const data = {
   subTitle: "Services provided",
   title: "Business Goals Achieved with ELDON",
@@ -28,14 +29,14 @@ const data = {
       imgSrc: Smart.src,
       altText: "Smart Features",
       title: "Smart Features",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      text: "With its advanced algorithms and cutting-edge technology, our app is equipped with smart features that help identify and delete hateful tweets quickly and efficiently.",
     },
     {
       id: 2,
       imgSrc: Secure.src,
       altText: "Secure Contents",
       title: "Secure Contents",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      text: "Safeguarding your privacy is our top priority. Our app employs advanced encryption methods to ensure the confidentiality of your data. You can trust that your information remains secure and protected from unauthorized access.",
     },
   ],
 };
@@ -223,6 +224,7 @@ const styles = {
       fontSize: [1, null, null, "14px", 1],
       fontWeight: 400,
       lineHeight: 1.9,
+      textAlign:"justify"
     },
   },
   videoWrapper: {

@@ -2,11 +2,14 @@ import { jsx, Box, Grid, Container, Image, Heading, Text } from "theme-ui";
 import { Link } from "../link";
 import data from "./footer.data";
 import FooterLogo from "../../assets/eldonfondtransparent.png";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
   return (
     <footer sx={styles.footer}>
       <Container>
+      {router.pathname === "/" && (
         <Grid sx={styles.widgets}>
           {data.widgets.map((item) => (
             <Box
@@ -21,6 +24,7 @@ export default function Footer() {
             </Box>
           ))}
         </Grid>
+        )}
         {/* End of footer widgets area */}
         <Box sx={styles.footer.footerBottomArea}>
           <Link path="/">
@@ -108,7 +112,7 @@ const styles = {
       "repeat(3,1fr)",
     ],
     widgetItem: {
-      textAlign: "center",
+      textAlign: "justify",
     },
     infoWrapper: {
       mt: [2, 3, null, 2, 4],

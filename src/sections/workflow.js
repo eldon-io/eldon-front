@@ -1,4 +1,4 @@
-import { Container, Grid, Box, Heading, Text } from "theme-ui";
+import { Container, Grid, Box, Heading, Text, jsx } from "theme-ui";
 import SectionHeader from "../components/section-header";
 
 import PatternBG from "../assets/patternBG.png";
@@ -8,30 +8,38 @@ import ArrowEven from "../assets/arrowEven.svg";
 const data = [
   {
     id: 1,
-    title: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Login to your social media account",
+    text: "To use our app, you'll need to log in to your social media account using your existing credentials. Don't worry, we take your privacy and security seriously.",
   },
   {
     id: 2,
-    title: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Give us required authorizations",
+    text: "In order for our app to work properly, we'll need certain authorizations from your social media account. This will allow us to access your content and identify any hateful or harmful comments, replies, or messages.",
   },
   {
     id: 3,
-    title: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Filter your social media content",
+    text: "Our app uses advanced algorithms to filter through your social media content and identify any harmful or offensive content. You'll be able to review and approve any potential deletions before they're removed permanently.",
   },
   {
     id: 4,
-    title: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Delete hateful content",
+    text: "Once you've reviewed and approved any deletions, our app will automatically remove any identified hateful or harmful content from your social media accounts. Say goodbye to negativity and hello to a more positive online experience!",
   },
 ];
 
 export default function WorkFlow() {
   return (
-    <section>
-      <Container sx={styles.workflow}>
+    <section style={{backgroundColor:'#2563FF',    
+    marginBottom:"80px",
+    padding:"40px",
+    backgroundImage: `url(${PatternBG.src})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    position: "relative",
+    py: [8, null, 9, null, null, 10],}}>
+      <Container >
         <SectionHeader
           slogan="How it works ?"
           title="Let’s see how it works"
@@ -54,15 +62,6 @@ export default function WorkFlow() {
   );
 }
 const styles = {
-  workflow: {
-    backgroundColor: "secondary",
-    backgroundImage: `url(${PatternBG.src})`,
-    backgroundRepeat: `no-repeat`,
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    position: "relative",
-    py: [8, null, 9, null, null, 10],
-  },
   grid: {
     mb: -1,
     pt: 0,
@@ -106,10 +105,10 @@ const styles = {
       },
     },
     "&:nth-of-type(2n-1)::before": {
-      backgroundImage: `url(${ArrowOdd})`,
+      backgroundImage: `url(${ArrowOdd.src})`,
     },
     "&:nth-of-type(2n)::before": {
-      backgroundImage: `url(${ArrowEven})`,
+      backgroundImage: `url(${ArrowEven.src})`,
       top: 17,
     },
     "&:last-child::before": {
@@ -152,6 +151,7 @@ const styles = {
       color: "white",
       opacity: 0.75,
       pr: [0, null, null, null, null, 5],
+      textAlign: "justify"
     },
   },
 };

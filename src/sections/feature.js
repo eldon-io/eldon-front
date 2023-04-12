@@ -13,35 +13,35 @@ const data = [
     imgSrc: Performance.src,
     altText: "Fast Performance",
     title: "Fast Performance",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "With lightning-fast API calls and a streamlined webservice structure, our app for deleting hateful tweets is a game-changer. Say goodbye to waiting for slow load times and hello to efficient, speedy performance. Because when it comes to fighting hate online, every second counts.",
   },
   {
     id: 2,
     imgSrc: Partnership.src,
     altText: "Pro Subscription",
     title: "Pro Subscription",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Choose from three different price ranges: Free, Pro Master, and Premium Plan. With Pro Master, enjoy advanced features like real-time monitoring and custom filters, while Premium takes it to the next level with personalized support and priority access to new updates.",
   },
   {
     id: 3,
     imgSrc: Subscription.src,
     altText: "Partnership deal",
     title: "Partnership deal",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Collaborate with us through one of our partnership deals and fight online hate speech with us. Customize our app to fit your needs and leverage our technology to make a real impact. Let's team up and create a safer, more inclusive online community !",
   },
   {
     id: 4,
     imgSrc: Support.src,
     altText: "Customer Support",
     title: "Customer Support",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Our customer support is available 24/7 to assist you with any questions or concerns. With our friendly and knowledgeable team, you'll never be alone in your journey towards a more positive online experience.",
   },
 ];
 
 export default function Feature() {
   return (
     <section sx={{ variant: "section.feature" }}>
-      <Container>
+      <Container style={{margin:"40px", paddingBottom:"40px"}}>
         <SectionHeader
           slogan="Quality features"
           title="Amazing useful features"

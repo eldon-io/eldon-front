@@ -78,8 +78,7 @@ export default function Subscribe() {
               Subscribe to our Blog
             </Heading>
             <Text as="p" sx={styles.description}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
-              tempor incididunt labore dolore.
+            Stay up-to-date on the latest news and tips for creating a safer and more positive online space by subscribing to our blog today!
             </Text>
             <form onSubmit={subscribe}>
               <Flex sx={styles.subscribeForm}>
@@ -125,6 +124,7 @@ export default function Subscribe() {
 
 const styles = {
   contentBox: {
+    marginTop: "100px",
     backgroundColor: "secondary",
     textAlign: "center",
     borderRadius: 10,
@@ -149,6 +149,7 @@ const styles = {
     color: "white",
     lineHeight: [1.85, null, null, 2],
     px: [0, null, 5],
+    textAlign: "justify"
   },
   subscribeForm: {
     mt: [6, null, null, 7],

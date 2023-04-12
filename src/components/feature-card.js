@@ -49,6 +49,7 @@ const styles = {
       fontSize: [1, "15px"],
       fontWeight: 400,
       lineHeight: "1.9",
+      textAlign:"justify"
     },
   },
 };

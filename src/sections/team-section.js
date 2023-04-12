@@ -145,7 +145,7 @@ const data = [
 
 export default function TeamSection() {
   return (
-    <section>
+    <section style={{marginTop:"100px", marginBottom:'100px'}}>
       <Container>
         <SectionHeader
           slogan="our team"
